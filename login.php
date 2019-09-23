@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['login-submit'])){
     //user clicked submit button, implement logic
-require "./scripts/database.php";
+require "./php/database.php";
 $username = $_POST['username'];
 $password = $_POST['password'];
 $_SESSION['loginError'] = array();

@@ -2,7 +2,7 @@
 session_start();
 if(isset($_POST['signup-submit'])){
 //user clicked submit button, implement logic
-require('./scripts/database.php');
+require('./php/database.php');
 // require "database.php";
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
