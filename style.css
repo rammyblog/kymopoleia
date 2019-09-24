@@ -10,7 +10,7 @@ body a:hover{
 .container{
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 127, 0, 0.9);
     
 }
 .main{
@@ -18,6 +18,11 @@ body a:hover{
     margin: 0 auto;
     /* background-color: gray; */
     height: 100vh;
+}#view{
+    padding: 9px 3px 13px 0;
+    background-color: #182955;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 #logo-div{
     float: left;
@@ -25,7 +30,7 @@ body a:hover{
 #logo-div p{
     font-style: italic;
     font-size: 14px;
-    color: #0000FF;
+    color: #182955;
     font-weight: bold;
     margin-top: -3px;
 }
@@ -34,7 +39,7 @@ body a:hover{
     font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 50px;
-    color: #0000FF;
+    color: #182955;
 }
 .nav-div{
     float: right;
@@ -51,7 +56,7 @@ header{
     overflow: hidden;
 }
 .nav-div a.active {
-    background-color:#0000FF;
+    background-color:#182955;
     color: white;
   }
 .nav-div a{
@@ -59,7 +64,7 @@ header{
     display: block;
     text-align: center;
     padding: 14px 16px;
-    color: #0000FF;
+    color: #182955;
     text-decoration: none;
     font-weight: bold;
     font-size: 17px;
@@ -83,7 +88,7 @@ header{
 }
 .center a{
     padding: 20px;
-    background-color: #0000FF;
+    background-color: #182955;
     line-height: 80px;
     text-decoration: none;
     color: #fff;
@@ -94,7 +99,7 @@ header{
     font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 45px;
-    color: #0000FF;
+    color: #182955;
     font-weight: normal;
 }
 .content-fields p{
@@ -128,7 +133,7 @@ header{
     margin-bottom: 10px;
 }
 #submit{
-    background:#0000FF;
+    background:#182955;
     color: #fff;
     height: 47px;
     font-weight: bold;
@@ -206,7 +211,7 @@ footer{
         font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 25px;
-    color: #0000FF;
+    color: #182955;
     font-weight: bold;
     }
     .content-fields p{
@@ -231,7 +236,7 @@ footer{
     #logo-div p{
         font-style: italic;
         font-size: 10px;
-        color: #0000FF;
+        color: #182955;
         font-weight: bold;
         margin-top: -2px;
     }
@@ -279,7 +284,7 @@ footer{
         font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 25px;
-    color: #0000FF;
+    color: #182955;
     font-weight: bold;
     }
     .content-fields p{
@@ -293,7 +298,7 @@ footer{
         font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 30px;
-    color: #0000FF;
+    color: #182955;
     }
     .content{
         text-align: center;
