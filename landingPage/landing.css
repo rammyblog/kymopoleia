@@ -47,6 +47,7 @@ body{
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+    height: 100vh;
 }
 
 .welcome-text{
@@ -145,6 +146,8 @@ body{
 .header-brandname a{
     color: #040268;
     font-weight: bold;
+    font-size: 30px;
+    
 }
 
 .footer-items{
