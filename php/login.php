@@ -36,7 +36,7 @@ $loginError = "";
         $user = $result->fetch(PDO::FETCH_ASSOC);
         
         if($username !== $user['username'] || !password_verify($password, $user['password'])){
-            $_SESSION['loginError'][] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account";
+            $loginError = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account";
             // header("location: ..index.php");
             // exit();
         }elseif($username === $user['username'] && password_verify($password, $user['password'])){
