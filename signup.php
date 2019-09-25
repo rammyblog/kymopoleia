@@ -1,11 +1,12 @@
-<?php include 'functions.php' ?>
+<!-- <?php require 'php/reg.php' ?>
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Budgit | Signup</title>
+    <title> BudgIT</title>
     <link rel = "icon" href = "images\logo2.png" type = "image/png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap" rel="stylesheet">
@@ -16,10 +17,10 @@
         <div class="main">
             <header>
                 <div id="logo-div">
-                    <img src="images/logo.png" id="logo" alt=""> <span id="logo-text">BudgIt</span> 
+                    <img src="images/logo.png" id="logo" alt=""> <span id="logo-text">BudgIT</span> 
                     <p>Making managing your finances hassle free</p>
                 </div>
-                <div id="nav-div" class="nav-div">
+                <!--<div id="nav-div" class="nav-div">
                     <p> <a href="index.html" > Home</a>
                         <a href=""> About</a>
                         <a href="login.html" id="login"> Login</a>
@@ -29,7 +30,7 @@
                                 <img src="img/mdi_menu.png" alt="">
                               </a>
                     </p>
-                </div>
+                </div>-->
             </header>
             <div class="content">
             
@@ -37,6 +38,9 @@
                 <p>It only takes a minute</p>
 
                 <form id="form" action="signUp.php" method="POST">
+                    <div>
+                        <?php if($regError!="") { echo $regError; } ?>
+                    </div>
                     <label>Your Name</label><br>
                     <input type="text" id="username" name="username"  placeholder="Lastname first" required><span id="Evalid"></span><br><br>
                     
@@ -62,6 +66,6 @@
             </footer>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
