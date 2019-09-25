@@ -1,6 +1,6 @@
 # **Kymopoleia Budget App**
 
-This a Budget App created by team Kymopoleia of HNG Internship. The Budget App, "BudgIt" is a user friendly app with a lot 
+This a Budget App created by team Kymopoleia of HNG Internship. The Budget App, "Kymo Budget" is a user friendly app with a lot 
 of functionalities.
 
 ## Features
