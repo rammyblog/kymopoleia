@@ -23,9 +23,15 @@ body {
     font-weight: 400;
 }
 
-.right { float: right; }
-.red { color: #FF5049 !important; }
-.red-focus:focus { border: 1px solid #FF5049 !important; }
+.right{ 
+    float: right; 
+    }
+.red { 
+    color: #FF5049 !important; 
+}
+.red-focus:focus{ 
+    border: 1px solid #FF5049 !important; 
+}
 
 /**********************************************
 *** TOP PART
