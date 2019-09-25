@@ -7,6 +7,8 @@ body{
 body a:hover{
     color: black;
 }
+
+
 .container{
     height: 100vh;
     width: 100%;
@@ -135,13 +137,15 @@ header{
 #submit{
     background:#182955;
     color: #fff;
-    height: 47px;
+    height: 40px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 5px;
     border: none !important;
-    width: 200px !important;
+    width: 100px !important;
+    cursor: pointer;
     }
+
 
 footer{
     width: 100%;
