@@ -36,17 +36,17 @@
                 <h1>Login </h1>
 
                 <form id="form" action="" method="POST">
-                        <i class="fa fa-user" style="color: #182955"></i>
+                        
                     <div>
                         <?php if($loginError != "") { echo $loginError; } ?>
                     </div>
-                    
-                    <input type="text" name="username" id="email"  placeholder="username/email address" required><span id="Evalid"></span><br><br>
+                    <i class="fa fa-user" style="color: #182955"></i>
+                    <input type="text" name="username" id="email"  placeholder="Enter username or email" required><span id="Evalid"></span><br><br>
                     <i class="fa fa-lock" style="color: #182955"></i>
-                    <input type="password" name="password" id="password" placeholder="password"equired><br>
+                    <input type="password" name="password" id="password" placeholder="Enter password" required ><br>
                     <!-- <span class="right" style="color: #182955">Forgot Password? Reset <a href="">here</a></span> <br><br> -->
                     <button id="submit" type="submit" value="Login">Login</button><br><br>
-                    <span>Don't have an account? Signup <a href="signup.php">here</a>.</span>
+                    <span>Don't have an account? <a href="signup.php"> Signup </a></span>
                 </form>
                 
                
