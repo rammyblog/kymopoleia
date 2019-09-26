@@ -1,30 +1,29 @@
 <?php
 session_start();
 if(isset($_POST['login-submit'])){
-//user clicked submit button, implement logic
-    
+    //user clicked submit button, implement logic
 require "./php/database.php";
 $username = $_POST['username'];
 $password = $_POST['password'];
 $_SESSION['loginError'] = array();
 if(empty($password) && empty($username)){
     $_SESSION['loginError'] [] = "Fill in all fields". "</br>";
-    header('location: ./login.php');
+    header('location: ./loginform.php');
     exit();
 }
 else if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
 	$_SESSION['loginError'][] = "Username should contain only alphanumeric characters". "</br>";
-    header('location: ./login.php');
+    header('location: ./loginform.php');
     exit();
 }
 else if(empty($username)){
 	$_SESSION['loginError'][] = "Username is a required field". "</br>";
-    header('location: ../login.php');
+    header('location: ../loginform.php');
     exit();
 }
 else if(empty($password)){
     $_SESSION['loginError'][] = "Password is a required field". "</br>";
-    header('location: ./login.php');
+    header('location: ./loginform.php');
     exit();
 }
 else{
