@@ -7,7 +7,6 @@ body{
 
 }
 
-
 .redText{
     font-weight: bold;
     font-size: 30px;
@@ -46,8 +45,7 @@ body{
     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
-    height: 100vh;
+    margin: 150px 0;
 }
 
 .welcome-text{
@@ -133,6 +131,10 @@ body{
     margin: 0 30px;
 }
 
+.footer-margin{
+    margin: 30px 0;
+}
+
 
 
 .redText{
@@ -151,17 +153,13 @@ body{
 }
 
 .footer-items{
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     background: #fff;
-   color: #000
-
 }
 
 
 .footer-links-list{
     list-style: none;
-    text-align: center; 
+    /* text-align: center;  */
     margin: 0;
     padding: 0;
 }
@@ -188,10 +186,8 @@ body{
 }
 
 @media(max-width:700px){
-    .features2-text{
-        order: 0;
-    }
 
+  
     .main-btn{
         width: auto;
         font-size: 12px;
@@ -204,14 +200,18 @@ body{
         display: block;
     }
     .single-about-card{
-        margin: 10px 0;  
+        margin-bottom: 10px;  
     }
     .welcome-text{
         font-size: 20px
     }
+
+
+    .app-downloads p {
+        font-weight: bold;
+        font-size: 1rem;
+    }
 }
-
-
 
 
 @media(max-width:600px){
