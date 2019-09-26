@@ -55,6 +55,20 @@ nav {
     transform: translate3d(-172px, 21px, 0px) !important;
 }
 
+#budget-menu{
+    transform: translate3d(2px, 40px, 0px) !important;
+    max-height: 250px;
+    overflow: auto;
+    width: 300px;
+
+}
+
+.scroller{
+    overflow-y: scroll;
+    scrollbar-color: #FD4720 #FD4720;
+    scrollbar-width: thin;
+}
+
 .user-avatar {
     margin-right: 20px;
     width: 39px;
