@@ -38,6 +38,10 @@ body{
     height: 50px;
     border-radius: 11px;
 }
+.main-btn a{
+    text-emphasis: none;
+    color:#FFFFFF
+}
 
 
 
