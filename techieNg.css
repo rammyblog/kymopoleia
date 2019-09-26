@@ -1,6 +1,6 @@
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: url('img/budget.png') no-repeat;
     background-size: cover;
 }
@@ -31,9 +31,12 @@ body a:hover{
 }
 #logo-text{
     /* margin-top: -10px; */
-    font-family: 'Lobster Two', cursive;
     font-weight: bold;
     font-size: 50px;
+    color: #040268;
+}
+#logo-text a{
+    text-decoration: none;
     color: #040268;
 }
 .nav-div{
@@ -50,20 +53,7 @@ body a:hover{
 header{
     overflow: hidden;
 }
-.nav-div a.active {
-    background-color:#040268;
-    color: white;
-  }
-.nav-div a{
-    float: left;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    color: #040268;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 17px;
-}
+
 .content-fields{
     float: left;
 
@@ -94,7 +84,7 @@ header{
     border-radius: 10px;
 }
 .content-fields h2{
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 45px;
     color: #040268;
@@ -216,7 +206,7 @@ footer{
         margin-top: 100px;
     }
     .content-fields h2{
-        font-family: 'Lobster Two', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 25px;
     color: #040268;
@@ -272,7 +262,7 @@ footer{
         margin-top: 100px;
     }
     .content-fields h2{
-        font-family: 'Lobster Two', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 25px;
     color: #040268;
@@ -286,7 +276,7 @@ footer{
   }
   @media only screen and (min-width:961px) and (max-width: 1600px){
     .content-fields h2{
-        font-family: 'Lobster Two', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 30px;
     color: #040268;
