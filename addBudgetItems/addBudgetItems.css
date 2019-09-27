@@ -83,7 +83,8 @@ main {
 .sidebar {
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 100vh;
+    min-height: 100vh;
+    /* height: 100vh; */
     z-index: -1;
     padding: 20px;
 }
@@ -148,7 +149,7 @@ hr{
 }
 
 .custom-select {
-    background: url('images/select.png') no-repeat right .75rem center/8px 10px;
+    background: url('../images/select.png') no-repeat right .75rem center/8px 10px;
     border: 1px solid #FD4720;
     box-sizing: border-box;
     border-radius: 11px;
