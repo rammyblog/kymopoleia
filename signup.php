@@ -1,3 +1,10 @@
+<?php
+
+// insert php code here
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +38,7 @@
                     <div class="form-group col-md-4">
                       <input type="password" class="form-control" placeholder="Your password">
                     </div>
-                    <button type="submit" class="btn btn-primary login-btn">Register    </button>
+                    <button type="submit" class="btn btn-primary login-btn">Sign Up</button>
             
 
             </form>   
