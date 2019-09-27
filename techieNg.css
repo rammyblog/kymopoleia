@@ -1,0 +1,136 @@
+body{
+    background-color: #FFF;
+    background-size: cover;
+    
+}
+
+.signinbox{
+    width: 461px;
+    height: 400px;
+    background: #FFF;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+h1{
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0, 0, 20px;
+    text-align: center;
+    font-size: 40px; font-style: normal;
+    font-family: roboto, sans-serif;
+    line-height: 47px; font-weight: bold;
+    
+}
+
+h2{
+    margin: 5px; margin-bottom: 10px;
+    padding: 0, 0, 20px;
+    text-align: center;
+    font-size: 30px; font-family: Roboto, sans-serif;
+    font-style: normal; font-weight: bold;
+    line-height: 35px;
+    color: #FD4720;
+
+    
+    
+}
+.signinbox p{
+    margin-left: 20px;
+    margin-top: 0px; margin-bottom: 0;
+    padding: 0; height: 20px; width: 163px;
+    font-weight: bold; font-style: normal;
+    font-size: 18px; line-height: 21px;
+    color:#040268;
+}
+
+
+
+
+
+h4{
+    
+    padding: 0 0 20ox;
+    font-weight: bold;
+    font-size: 18px; line-height: 21px;
+    font-style: normal; text-align: center;
+    font-family: Roboto,sans-serif;
+
+
+
+}
+
+.signinbox input{
+    width: 90%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+.signinbox input[type="text"], input[type="password"]
+{
+    border: 2px solid orangered;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+
+
+}
+
+.signinbox input[type= "email"]
+{
+    border: 2px solid #FD4720;
+    border-radius: 10px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    
+}
+
+
+
+.signinbox input[type="submit"]
+{
+    border: 2px solid darkblue;
+    border-radius: 10px;
+    background: darkblue;
+    height: 40px;
+    margin-top: 20px;
+     
+}
+
+.signinbox input[value="Sign In"]
+{
+    text-align: center;
+    color: #FFF; 
+    font-family:  Roboto, sans-serif;
+    font-size: 24px;
+
+}
+
+.signinbox a{
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: #040268;
+    
+    
+}
+
+.signinbox input[value= "Create Account"]
+{
+    text-align: center;
+    color: #FFF; font-weight: bold;
+    font-family: Roboto,  sans-serif;
+    font-size: 24px;
+}
