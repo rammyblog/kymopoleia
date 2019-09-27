@@ -89,10 +89,10 @@ if($user){
         <h3 class="text-center spacing">Signup</h3>
             <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
                 <div class="form-group col-md-4 ">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="firstname" value="<?php echo $firstname; ?>"  required><span class="error"><?php echo $firstError; ?></span>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" value="<?php echo $firstname; ?>"  required><span class="error"><?php echo $firstError; ?></span>
                 </div>
                 <div class="form-group col-md-4 ">
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="lastname" value="<?php echo $lastname; ?>"  required><span class="error"><?php echo $lastError; ?></span>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" value="<?php echo $lastname; ?>"  required><span class="error"><?php echo $lastError; ?></span>
                
                       
                 </div>
@@ -107,7 +107,7 @@ if($user){
                   <input class="form-control" type="password"name="password" id="password"  class="form-control" placeholder="Your password" required><span class="error"><?php echo $passError; ?></span>
                 </div>
                 <div class="form-group col-md-4">
-                <input type="password"  class="form-control" name="confirmPassword" id="confirmPassword" placeholder="confirm password" required ><span class="error"><?php echo $passError; ?></span>
+                <input type="password"  class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" required ><span class="error"><?php echo $passError; ?></span>
                 </div>  
                 <button type="submit" class="btn btn-primary login-btn">Sign Up</button>
             </form>   
