@@ -22,7 +22,7 @@
     <img src="images/Ellipse.png" class="img-fluid top-ellipse" alt="">
     <section class="container login-section ">
         <div class="text-center spacing">
-        <img src="../landingPage/images/kymo.png" class="img-fluid" alt="">
+        <a href="index.php"><img src="images/kymo.png" class="img-fluid" alt=""></a>
     </div>
         <h3 class="text-center spacing">Signup</h3>
             <form class="">
