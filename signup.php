@@ -1,7 +1,69 @@
 <?php
+require_once('./PHP/database.php');
+// require "database.php";
+$firstname = $username=$lastname = $emailAddress =  "";
+$errors = $firstError = $nameError = $lastError =$emailError =$passError ="";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+//user clicked submit button, implement logic
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email = $_POST['emailAddress'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$confirmPassword = $_POST['confirmPassword'];
 
-// insert php code here
-
+if(empty($firstname) && empty($lastname) && empty($emailAddress) && empty($username) && empty($password) && empty($confirmPassword)){
+    $errors  = "Fill in all fields". "</br>";
+}else if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
+	$nameError = "Username should contain only alphanumeric characters". "</br>";
+}
+else if(empty($lastname)){
+	$lastError = "Please Enter your last name". "</br>";
+}
+else if(empty($firstname)){
+	$firstError = "Please Enter your first name". "</br>";
+}
+else if(empty($username)){
+	$nameError = "Username is a required field". "</br>";
+}
+else if(empty($password)){
+    $passError = "Password is a required field". "</br>";
+}
+else if(empty($confirmPassword)){
+    $passError = "Password is a required field". "</br>";
+}
+else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+    $emailError = "Email is not in a valid format". "<br>";
+}
+else if ($password !== $confirmPassword){
+    $passError = "Passwords do not match". "<br>";
+}
+else{
+    
+$checkUser = "SELECT * FROM users WHERE usernames = '$username' OR email='$emailAddress'";
+$result = $conn->query($checkUser);
+$user = $result->fetch(PDO::FETCH_ASSOC);
+if($user){
+    $nameError = "Username already exists. Please choose a different username";
+}else{
+    $checkUser2 = "SELECT * FROM users WHERE  email='$emailAddress'";
+    $result = $conn->query($checkUser);
+    $emailAddress = $result->fetch(PDO::FETCH_ASSOC);
+    if($emailAddress){
+        $emailError = "Email already exists. Please choose a different Email";
+    }
+    else{
+    $passHash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (firstname, lastname, usernames, email, password)
+    VALUES ('$firstname', '$lastname', '$username', '$email', '$passHash')";
+    $done = $conn->exec($sql);
+     $_SESSION['success'] = "Sign up was successful, please use your registration details to login";
+    header('location:login.php');
+    exit();
+} 
+}
+   }
+}
 ?>
 
 
@@ -25,24 +87,31 @@
         <a href="index.php"><img src="images/kymo.png" class="img-fluid" alt=""></a>
     </div>
         <h3 class="text-center spacing">Signup</h3>
-            <form class="">
-                    <div class="form-group col-md-4 ">
-                            <input type="text" class="form-control" aria-describedby=usernameHelp" placeholder="Your username">
-                          </div>
+            <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
+                <div class="form-group col-md-4 ">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="firstname" value="<?php echo $firstname; ?>"  required><span class="error"><?php echo $firstError; ?></span>
+                </div>
+                <div class="form-group col-md-4 ">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="lastname" value="<?php echo $lastname; ?>"  required><span class="error"><?php echo $lastError; ?></span>
+               
+                      
+                </div>
+                <div class="form-group col-md-4" >
+                <input type="text" class="form-control" aria-describedby="usernameHelp" placeholder="Your username" id="username" name="username" value="<?php echo $username; ?>" required><span class="error"><?php echo $nameError; ?></span>
+                </div>
+                <div class="form-group col-md-4 ">
+                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="emailAddress" value="<?php echo $emailAddress; ?>" required><span class="error"><?php echo $emailError; ?></span>
+                </div>
 
-
-                    <div class="form-group col-md-4 ">
-                      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address">
-                    </div>
-
-                    <div class="form-group col-md-4">
-                      <input type="password" class="form-control" placeholder="Your password">
-                    </div>
-                    <button type="submit" class="btn btn-primary login-btn">Sign Up</button>
-            
-
+                <div class="form-group col-md-4">
+                  <input class="form-control" type="password"name="password" id="password"  class="form-control" placeholder="Your password" required><span class="error"><?php echo $passError; ?></span>
+                </div>
+                <div class="form-group col-md-4">
+                <input type="password"  class="form-control" name="confirmPassword" id="confirmPassword" placeholder="confirm password" required ><span class="error"><?php echo $passError; ?></span>
+                </div>  
+                <button type="submit" class="btn btn-primary login-btn">Sign Up</button>
             </form>   
-
+            <span class="error"><?php echo $errors; ?></span>
     </section>
   
 

@@ -1,11 +1,51 @@
 <?php
 
-// insert php code here
+require_once "./PHP/database.php";
+session_start();
+$_SESS['loginError'] =$_SESS['emailError'] =$_SESS['passError'] = "";
+$password = $username="";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //user clicked submit button, implement logic
 
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+if(empty($password) && empty($username)){
+    $_SESS['loginError'] = "Fill in all fields". "</br>";
+   
+}
+// else if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
+// 	$_SESS['emailError'] = "Username should contain only alphanumeric characters". "</br>";
+    
+// }
+else if(empty($username)){
+	$_SESS['emailError'] = "Username is a required field". "</br>";
+    
+}
+else if(empty($password)){
+    $_SESS['passError'] = "Password is a required field". "</br>";
+    
+}
+else{
+        
+    $sql = "SELECT * FROM users WHERE email='$username'";
+    
+    $result = $conn->query($sql);
+    
+    $user = $result->fetch(PDO::FETCH_ASSOC);
+
+    $_SESSION = $user;
+	if($username !== $user['email'] || !password_verify($password, $user['password'])){
+        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account";
+		// echo($_SESSION['loginError']);
+    }elseif($username === $user['email']||$username === $user['email'] && password_verify($password, $user['password'])){
+		header("location: index.php");
+		exit;
+	}
+      
+    }
+}
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,29 +59,28 @@
     <title>KymoMoney | Login</title>
 </head>
 <body>
-
     <img src="images/Ellipse.png" class="img-fluid top-ellipse" alt="">
     <section class="container login-section ">
         <div class="text-center spacing">
         <a href="index.php"><img src="images/kymo.png" class="img-fluid" alt=""></a>
     </div>
         <h3 class="text-center spacing">Welcome Back!</h3>
-            <form class="">
+            <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
                     <div class="form-group col-md-4 ">
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address">
+                      <input type="email"  name="username" id="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address" value="<?php echo $username; ?>" required><span class="error"><?php echo $_SESS['emailError']; ?></span>
                     </div>
 
                     <div class="form-group col-md-4">
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Your password">
+                      <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Your password" required ><span class="error"><?php echo $_SESS['passError']; ?></span>
                     </div>
                     <button type="submit" class="btn btn-primary login-btn">Login</button>
             
 
-            </form>   
+            </form>  
             <div class="forgot__pass__link">
-                    <a  href="#">Forgot Password?</a>
-                        
-                    </div>
+                <a  href="#">Forgot Password?</a>
+                <?php echo $_SESS['loginError']; ?> 
+            </div>
     </section>
   
 
