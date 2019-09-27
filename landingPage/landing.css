@@ -78,7 +78,7 @@ body{
 
 .feature-section{
     color: #000;
-    background: #040268;
+    background: #FD4720;;
 }
 
 .feature-section h3{
@@ -89,7 +89,6 @@ body{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
     grid-gap: 20px;
-    background: #040268;
     z-index: 2;
     color: #fff;
     margin: 50px 0;
@@ -176,6 +175,13 @@ body{
 
 .features2-text{
     order: 2;
+}
+
+.copyright{
+    background-color:#FD4720; 
+    color: #fff;
+     padding: 20px 0;
+     margin-bottom: 3px;
 }
 
 @media(max-width:761px){

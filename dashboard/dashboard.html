@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rosarivo&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="addBudgetAmount.css">
+    <link rel="stylesheet" href="addBudgetItems.css">
     <link rel="stylesheet" href="dashboard.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
@@ -17,37 +17,38 @@
 </head>
 <body class="">
     <header>
-            <nav>
-                    <div class="brandname">
-                        <h2 class="header-brandname"><a href="#"> <span class="redText">Kymo</span> Budget</a></h2>
+
+        <nav>
+            <div class="brandname">
+                <h2 class="header-brandname"><a href="#"> <span class="redText">Kymo</span> Budget</a></h2>
+            </div>
+            <img class='user-avatar' src="images/user.png" alt="">
+            <div class="dropdown">
+                    <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="images/drop.png" alt="">
                     </div>
-                    <img class='user-avatar' src="../images/user.png" alt="">
-                    <div class="dropdown">
-                            <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <img src="../images/drop.png" alt="">
-                            </div>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#"> <i style="color: #FD4720" class="fas fa-cog"></i> Settings</a>
-                              <a class="dropdown-item" href="#">Sign out</a>
-                            </div>
-                          </div>
-        
-                </nav>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+
+        </nav>
 
     </header>
 
     <main>
 
-
         <section class="sidebar">
-        
 
             <ul class="sidebar-list">
-                <li class="active" ><i class="fas fa-home"></i> Dashboard</li>
-                <li ><i class="fas fa-plus-circle"></i> Add Budget Items</li>
-                <li><i class="fas fa-plus-circle"></i>  Add Items</li>
+                <li > <i class="fa fa-plus-circle"></i><a href="#" class="active">Dashboard</a></li>
+                <li><i class="fa fa-plus-circle"></i><a href="#">Add Budget Items</a></li>
+                <li><i class="fa fa-plus-circle"></i><a href="#">Add Category</a></li>
             </ul>
         </section>
+
 
 
         <section class="buget__dashboard">
@@ -57,7 +58,7 @@
                     <p class="welcome__user">HI <span class="dashboard__username">Femi Jeffery</span>, we are glad you are here.</p>
                     <div class="budget__info">
                         <div>
-                                <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
+                                <i style='color: #FD4720;' class="fas fa-home fa-2x"></i>
                         </div>
                         <div>
                                 <p style="display: inline; color: #000000;">Total funds budgeted (overall budget)</p>
