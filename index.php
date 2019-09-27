@@ -1,3 +1,10 @@
+<?php
+
+// insert php code header_remove
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +38,10 @@
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link">Login</a>
+                                <a class="nav-link" href="login.php">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-primary  text-center" href="#">Sign Up</a>
+                            <a class="nav-link btn btn-primary  text-center" href="signup.php">Sign Up</a>
                         </li>
                     </ul>
                 </div>
