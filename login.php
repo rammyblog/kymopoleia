@@ -68,11 +68,13 @@ else{
             <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">    
                     <div class="col-md-4"><?php if(!empty($_SESS['loginError'])){   echo "<div class='alert alert-danger'><i class='fas fa-times-circle'></i>&nbsp;". $_SESS['loginError']."</div>"; } ?></div>
                     <div class="form-group col-md-4">
-                      <input type="email"  name="username" id="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address" value="<?php echo $username; ?>" required><span class="error"><?php echo $_SESS['emailError']; ?></span>
+                      <input type="email"  name="username" id="username" class="form-control <?php if(!empty($_SESS['emailError'])){echo "is-invalid"; } ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address" value="<?php echo $username; ?>" >
+                      <div class="invalid-feedback"><?php echo $_SESS['emailError']; ?></div>
                     </div>
 
                     <div class="form-group col-md-4">
-                      <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Your password" required ><span class="error"><?php echo $_SESS['passError']; ?></span>
+                      <input type="password" name="password" id="password" class="form-control <?php if(!empty($_SESS['passError'])){echo "is-invalid"; } ?>" id="exampleInputPassword1" placeholder="Your password"  >
+                      <div class="invalid-feedback"><?php echo $_SESS['passError']; ?></div>
                     </div>
                     <button type="submit" class="btn btn-primary login-btn">Login</button>
             
