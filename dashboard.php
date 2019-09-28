@@ -48,7 +48,7 @@
 
             <ul class="sidebar-list">
                 <li > <i class="fa fa-home"></i><a href="#" class="active"> Dashboard</a></li>
-                <li><i class="fa fa-plus-circle"></i><a href="#"> Add Budget </a></li>
+                <li><i class="fa fa-plus-circle"></i><a href="addBudget.php"> Add Budget </a></li>
                 <li><i class="fa fa-plus-circle"></i><a href="#"> Add Expenses</a></li>
             </ul>
         </section>
