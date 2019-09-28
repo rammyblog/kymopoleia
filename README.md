@@ -24,7 +24,7 @@ https://res.cloudinary.com/mercyinyang/image/upload/v1569633433/HNG%20task/Creat
 (https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Login_stlvzl.png
 
 The user then logs in and is redirected to the dashboard. On the dashboard is the total amount of budget funds (if any). The user is able to see the list of all budgets made alongside the amount and number of items in each budget. There is also a 'Create new budget' button which directs you to the add budget page.
-https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Dashboard_homepage_livxqn.png
+![KymoBudgetHomepage] https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Dashboard_homepage_livxqn.png
 
 
 On the Add budget page, the user adds the budget title and budget amount. Next, User adds an item, selects budget, set its priority and enters description of the item. User can add multiple items to the list.
