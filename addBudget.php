@@ -29,14 +29,14 @@
 
         <nav>
             <div class="brandname">
-                <h2 class="header-brandname"><a href="#"><img src="../images/kymo.png" alt=""> </a></h2>
+                <h2 class="header-brandname"><a href="#"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
             <p class="welcome_user">Hi, <span class="blueText">Femi Jeffery</span></p>
-            <img class='user-avatar' src="../images/user.png" alt="">
+            <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                 <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
-                    <img src="../images/drop.png" alt="">
+                    <img src="images/drop.png" alt="">
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="#">Settings</a>
