@@ -75,7 +75,7 @@ else{
                     </div>
                     <button type="submit" class="btn btn-primary login-btn">Login</button>
             
-<div></div>
+
             </form>  
             <div class="forgot__pass__link">
                 <a  href="#">Forgot Password?</a>
