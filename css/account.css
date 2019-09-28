@@ -86,7 +86,7 @@
  }
  
  #top-logo {
-     position: absolute;
+     position: fixed;
      width: 233.02px;
      height: 40px;
      left: 44px;
