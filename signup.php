@@ -32,6 +32,9 @@ else if(empty($password)){
 else if(empty($confirmPassword)){
     $passError = "Password is a required field". "</br>";
 }
+elseif (strlen($_POST['password']) < 8 ) {
+    $passError = "Password should be minimum of eight (8) characters";     
+}
 else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $emailError = "Email is not in a valid format". "<br>";
 }
@@ -88,30 +91,37 @@ if($user){
     </div>
         <h3 class="text-center spacing">Signup</h3>
             <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
-                <div class="form-group col-md-4 ">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Firstname" value="<?php echo $firstname; ?>"  required><span class="error"><?php echo $firstError; ?></span>
+                <div class="form-group col-md-4">
+                    <?php if(!empty($errors)){  echo "<div class='alert alert-danger'><i class='fa fa-times'></i>&nbsp;".$errors."</div>"; }?>
                 </div>
                 <div class="form-group col-md-4 ">
-                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Lastname" value="<?php echo $lastname; ?>"  required><span class="error"><?php echo $lastError; ?></span>
-               
-                      
+                    <input type="text" class="form-control <?php if(!empty($firstError)){echo "is-invalid"; } ?>" id="firstname" name="firstname" placeholder="Firstname" value="<?php echo $firstname; ?>"  required>
+                    <div class="invalid-feedback"><?php echo $firstError; ?>
+                    </div>
+                </div>
+                <div class="form-group col-md-4 ">
+                    <input type="text" class="form-control <?php if(!empty($lastError)){echo "is-invalid"; } ?>" id="lastname" name="lastname" placeholder="Lastname" value="<?php echo $lastname; ?>"  required>
+                    <div class="invalid-feedback"><?php echo $lastError; ?></div>  
                 </div>
                 <div class="form-group col-md-4" >
-                <input type="text" class="form-control" aria-describedby="usernameHelp" placeholder="Your username" id="username" name="username" value="<?php echo $username; ?>" required><span class="error"><?php echo $nameError; ?></span>
+                    <input type="text" class="form-control <?php if(!empty($nameError)){echo "is-invalid"; } ?>" aria-describedby="usernameHelp" placeholder="Your username" id="username" name="username" value="<?php echo $username; ?>" required>
+                    <div class="invalid-feedback"><?php echo $nameError; ?></div>
                 </div>
                 <div class="form-group col-md-4 ">
-                  <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="emailAddress" value="<?php echo $emailAddress; ?>" required><span class="error"><?php echo $emailError; ?></span>
+                    <input type="email" class="form-control <?php if(!empty($emailError)){echo "is-invalid"; } ?>" aria-describedby="emailHelp" placeholder="Your email address" id="emailAddress" name="emailAddress" value="<?php echo $emailAddress; ?>" required>
+                    <div class="invalid-feedback"><?php echo $emailError; ?></div>
                 </div>
 
                 <div class="form-group col-md-4">
-                  <input class="form-control" type="password"name="password" id="password"  class="form-control" placeholder="Your password" required><span class="error"><?php echo $passError; ?></span>
+                    <input class="form-control <?php if(!empty($passError)){echo "is-invalid"; } ?>" type="password"name="password" id="password"  class="form-control" placeholder="Your password" required>
+                    <div class="invalid-feedback"><?php echo $passError; ?></div>
                 </div>
                 <div class="form-group col-md-4">
-                <input type="password"  class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" required ><span class="error"><?php echo $passError; ?></span>
-                </div>  
+                    <input type="password"  class="form-control <?php if(!empty($passError)){echo "is-invalid"; } ?>" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" required >
+                    <div class="invalid-feedback"><?php echo $passError; ?></div>
+                </div> 
                 <button type="submit" class="btn btn-primary login-btn">Sign Up</button>
             </form>   
-            <span class="error"><?php echo $errors; ?></span>
     </section>
   
 

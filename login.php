@@ -36,7 +36,7 @@ else{
 
     $_SESSION = $user;
 	if($username !== $user['email'] || !password_verify($password, $user['password'])){
-        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account";
+        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account.";
 		// echo($_SESSION['loginError']);
     }elseif($username === $user['email']||$username === $user['email'] && password_verify($password, $user['password'])){
         header("location: dashboard.php");
@@ -65,13 +65,16 @@ else{
         <a href="index.php"><img src="images/kymo.png" class="img-fluid" alt=""></a>
     </div>
         <h3 class="text-center spacing">Welcome Back!</h3>
-            <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">
-                    <div class="form-group col-md-4 ">
-                      <input type="email"  name="username" id="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address" value="<?php echo $username; ?>" required><span class="error"><?php echo $_SESS['emailError']; ?></span>
+            <form class="" action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method="POST">    
+                    <div class="col-md-4"><?php if(!empty($_SESS['loginError'])){   echo "<div class='alert alert-danger'><i class='fas fa-times-circle'></i>&nbsp;". $_SESS['loginError']."</div>"; } ?></div>
+                    <div class="form-group col-md-4">
+                      <input type="email"  name="username" id="username" class="form-control <?php if(!empty($_SESS['emailError'])){echo "is-invalid"; } ?>" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email address" value="<?php echo $username; ?>" >
+                      <div class="invalid-feedback"><?php echo $_SESS['emailError']; ?></div>
                     </div>
 
                     <div class="form-group col-md-4">
-                      <input type="password" name="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Your password" required ><span class="error"><?php echo $_SESS['passError']; ?></span>
+                      <input type="password" name="password" id="password" class="form-control <?php if(!empty($_SESS['passError'])){echo "is-invalid"; } ?>" id="exampleInputPassword1" placeholder="Your password"  >
+                      <div class="invalid-feedback"><?php echo $_SESS['passError']; ?></div>
                     </div>
                     <button type="submit" class="btn btn-primary login-btn">Login</button>
             
@@ -79,7 +82,7 @@ else{
             </form>  
             <div class="forgot__pass__link">
                 <a  href="#">Forgot Password?</a>
-                <?php echo $_SESS['loginError']; ?> 
+                 
             </div>
     </section>
   
