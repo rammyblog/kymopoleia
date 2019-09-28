@@ -1,5 +1,4 @@
-![](Homepage.png)
-<div align="center">
+![...](Homepage.png)
 
 ![hng](Homepage.png)
 
