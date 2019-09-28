@@ -1,9 +1,6 @@
 <?php
-if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
-    //User did not sign in but attempted to access url.
-    header('location: login.php');
-    exit;
-}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +11,7 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rosarivo&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
     
@@ -26,10 +23,10 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
 
         <nav>
             <div class="brandname">
-                <h2 class="header-brandname"><a href="#"><img src="../landingPage/images/kymo.png" alt=""> </a></h2>
+                <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
             <p class="welcome_user">Hi, <span class="blueText">Femi Jeffery</span></p>
-            <img class='user-avatar' src="../addBudgetItems/images/user.png" alt="">
+            <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <img src="../addBudgetItems/images/drop.png" alt="">
