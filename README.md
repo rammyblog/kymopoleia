@@ -1,73 +1,35 @@
-![KymoBudgetHomepage](https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Homepage_fp5sir.png)
+![KymoBudgetHomepage]
 
 
-![hng](https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Login_stlvzl.png)
+![hng])
 
 
 # **Kymopoleia Budget App**
 
-This a Budget App created by team Kymopoleia of HNG Internship. The Budget App, "BudgIt" is a user friendly app with a lot 
-of functionalities.
+This a Budget App created by team Kymopoleia of HNG Internship. The Budget App, "Kymo Budget" is a user friendly App that allows a user enter total amount available, and the app calculates how much each item gets based on assigned priority.
 
-## Installation Guide
 
-- You need a php server, download Xampp or Wamp
-- Clone this repository into your `htdocs`  folder in the server you downloaded.
-- If you have not been added to the organization, kindly work in your own forked repository and open a pull request here.
-- Fork the repository and push to your `staging branch`.
-- Merge to your `master` and compare forks with the original repository
-- Open a Pull Request.
-- **Read [this](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) or watch [this](https://www.youtube.com/watch?v=G1I3HF4YWEw) for more help**
-```bash
-git clone https://github.com/hngi/kymopoleia.git
-```
-
-```bash
-cd hng.tech
-```
-
-```bash
-cp .env.example .env
-```
-
-```bash
-php -S localhost:8000
-```
-
-```bash
-Visit localhost:8000 in your browser
-```
-# Contribution Guide
-
-```bash
-git checkout staging
-```
-
-The template for your profile page can be found here
-`views/interns/template.php`
-
-- Copy the contents of that file
-- Create a new file with your slack username, e.g `mark.php`
-- Paste the contents there
-- Now your page should be assesible via `localhost:8000/interns/mark`
-  ![hng profile](https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Dashboard_homepage_livxqn.png)
-- Edit the contents of the file to your profile details
-- Push to `staging` branch and open a pull request
-- Wait for review
-
-**Ensure you read this doc [here](https://docs.google.com/document/d/1TxZqGLsut4ZVJEP6xF-DZGq3goaHfQ2phF-1I3YbrNc/edit?usp=sharing) for complete instructions** <br>
-Failure to do this will warant closing your pull request
-
-## Features
+## Features of the app
  - Calculates total available budget
  - Priorities of items, to be set by user (High, Medium and Low)
  - Allocation to items based on priorities.
 
 # Description
-The user creates an account with the app, to enable him/her login any other place at any time, and logs in to the welcome
-page. The user then inputs the total available budget, as well as other minor details like "Budget title", "Start time" 
-etc. Next, User adds an item, set its priority and enter the amount of the item. User can add multiple items to the list.
-The app then calculates how much each item gets based on the assigned priorities.
+A new user visits the homepage then clicks on sign up. 
+(https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Homepage_fp5sir.png)
+
+
+The user creates an account with the app, to enable him/her login at any time.
+https://res.cloudinary.com/mercyinyang/image/upload/v1569633433/HNG%20task/Create_account_zaonu7.png
+(https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Login_stlvzl.png
+
+The user then logs in and is redirected to the dashboard. On the dashboard is the total amount of budget funds (if any). The user is able to see the list of all budgets made alongside the amount and number of items in each budget. There is also a 'Create new budget' button which directs you to the add budget page.
+https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Dashboard_homepage_livxqn.png
+
+
+On the Add budget page, the user adds the budget title and budget amount. Next, User adds an item, selects budget, set its priority and enters description of the item. User can add multiple items to the list.
+After the user clicks on save, the app then calculates how much each item gets based on the assigned priorities. The output of the budget items and calculation is then displayed on a table.
+https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Add_Budget_xkedxf.png
 
 
 
