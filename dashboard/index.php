@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_email'])){
+    //User did not sign in but attempted to access url.
+    header('location: login.php');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
