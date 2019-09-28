@@ -65,7 +65,7 @@ else{
     <!-- Just an image -->
 
 
-    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="" height="30" alt="logo"></a>
+    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="auto" height="30" alt="logo"></a>
 
     <img src="images/Ellipse.png" class="img-fluid top-ellipse" alt="">
 
