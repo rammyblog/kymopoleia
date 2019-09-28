@@ -26,7 +26,7 @@
                 <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
             <p class="welcome_user">Hi, <span class="blueText">Femi Jeffery</span></p>
-            <img class='user-avatar' src="../addBudgetItems/images/user.png" alt="">
+            <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <img src="../addBudgetItems/images/drop.png" alt="">
