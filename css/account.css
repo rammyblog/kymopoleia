@@ -114,6 +114,10 @@
      font-weight: normal;
  }
  
+ .Already-acc a {
+     text-decoration: none;
+ }
+ 
  .Already-acc span {
      color: #2B4CF2;
  }

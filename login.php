@@ -65,7 +65,7 @@ else{
     <!-- Just an image -->
 
 
-    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="" height="30" alt=""></a>
+    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="" height="30" alt="logo"></a>
 
     <img src="images/Ellipse.png" class="img-fluid top-ellipse" alt="">
 
@@ -90,7 +90,7 @@ else{
             <br>
             <button type="submit" class="btn btn-primary login-btn">Login</button>
 
-            <p class="Already-acc">New to Kymo Budget?&nbsp;&nbsp;<span>Sign Up</span></p>
+            <p class="Already-acc">New to Kymo Budget?&nbsp;&nbsp;<span><a href="signup.php"> Sign Up</span></a></p>
 
         </form>
 
