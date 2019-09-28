@@ -1,7 +1,7 @@
-![Build Status](C:\Users\Michaelzy\Downloads\Homepage.png)
+![Build Status](Homepage.png)
 <div align="center">
 
-![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
+![hng](Homepage.png)
 
 <br>
 
