@@ -32,6 +32,9 @@ else if(empty($password)){
 else if(empty($confirmPassword)){
     $passError = "Password is a required field". "</br>";
 }
+elseif (strlen($_POST['password']) < 8 ) {
+    $passError = "Password should be minimum of eight (8) characters";     
+}
 else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
     $emailError = "Email is not in a valid format". "<br>";
 }

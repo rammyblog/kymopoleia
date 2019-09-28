@@ -36,7 +36,7 @@ else{
 
     $_SESSION = $user;
 	if($username !== $user['email'] || !password_verify($password, $user['password'])){
-        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account";
+        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account.";
 		// echo($_SESSION['loginError']);
     }elseif($username === $user['email']||$username === $user['email'] && password_verify($password, $user['password'])){
         header("location: dashboard.php");
