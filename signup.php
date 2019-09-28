@@ -58,7 +58,7 @@ if($user){
     VALUES ('$firstname', '$lastname', '$username', '$email', '$passHash')";
     $done = $conn->exec($sql);
      $_SESSION['success'] = "Sign up was successful, please use your registration details to login";
-    header('location:login.php');
+    header('location: login.php');
     exit();
 } 
 }
