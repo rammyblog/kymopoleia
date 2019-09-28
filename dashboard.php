@@ -23,13 +23,13 @@
 
         <nav>
             <div class="brandname">
-                <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
+                <h2 class="header-brandname"><a href="index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
             <p class="welcome_user">Hi, <span class="blueText">Femi Jeffery</span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="../addBudgetItems/images/drop.png" alt="">
+                      <img src="images/drop.png" alt="">
                     </div>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Action</a>
@@ -48,8 +48,8 @@
 
             <ul class="sidebar-list">
                 <li > <i class="fa fa-home"></i><a href="#" class="active"> Dashboard</a></li>
-                <li><a href="addBudget.php"><i class="fa fa-plus-circle"></i><a href="addBudget.php"> Add Budget </a></li>
-                <li><a href="#"><i class="fa fa-plus-circle"></i> Add Expenses</a></li>
+                <li><a href="addBudget.php"><i class="fa fa-plus-circle"></i>Add Budget </a></li>
+                <!-- <li><a href="#"><i class="fa fa-plus-circle"></i> Add Expenses</a></li> -->
             </ul>
         </section>
 
