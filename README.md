@@ -1,4 +1,4 @@
-![Build Status](Homepage.png)
+![](Homepage.png)
 <div align="center">
 
 ![hng](Homepage.png)
