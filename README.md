@@ -1,10 +1,9 @@
-![...](Homepage.png)
+![KymoBudgetHomepage](https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Homepage_fp5sir.png)
 
-![hng](Homepage.png)
 
-<br>
+![hng](https://res.cloudinary.com/mercyinyang/image/upload/v1569633434/HNG%20task/Login_stlvzl.png)
 
-</div>
+
 # **Kymopoleia Budget App**
 
 This a Budget App created by team Kymopoleia of HNG Internship. The Budget App, "BudgIt" is a user friendly app with a lot 
@@ -51,7 +50,7 @@ The template for your profile page can be found here
 - Create a new file with your slack username, e.g `mark.php`
 - Paste the contents there
 - Now your page should be assesible via `localhost:8000/interns/mark`
-  ![hng profile](https://res.cloudinary.com/iambeejayayo/image/upload/v1554302765/download.png)
+  ![hng profile](https://res.cloudinary.com/mercyinyang/image/upload/v1569633560/HNG%20task/Dashboard_homepage_livxqn.png)
 - Edit the contents of the file to your profile details
 - Push to `staging` branch and open a pull request
 - Wait for review
