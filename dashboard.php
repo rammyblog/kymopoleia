@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rosarivo&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
-
+    
 
     <title>Kymo Budget | Dashboard </title>
 </head>
@@ -19,7 +23,7 @@
 
         <nav>
             <div class="brandname">
-                <h2 class="header-brandname"><a href="#"><img src="../landingPage/images/kymo.png" alt=""> </a></h2>
+                <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
             <p class="welcome_user">Hi, <span class="blueText">Femi Jeffery</span></p>
             <img class='user-avatar' src="../addBudgetItems/images/user.png" alt="">
@@ -59,7 +63,7 @@
                         <div>
                                 <p>Total funds budgeted</p>
                                 <p id="total_amount_budgeted"></p>
-
+    
                         </div>
 
                     </div>
@@ -107,7 +111,7 @@
             data-mobile-responsive="true"
             data-check-on-init="true"
             >
-
+    
             <thead>
                 <tr>
                 <th>Budgets</th>
@@ -165,7 +169,7 @@
                 <td data-value="">1/1/2019</td>
                 <td>12</td>
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
-
+                
                 </tr>
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
@@ -220,7 +224,7 @@
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
 
                 </tr>     
-
+                
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                     <td>
                         <a href="#">January budgets</a>
@@ -232,7 +236,7 @@
 
                     </tr>
 
-
+                
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a href="#">January budgets</a>
@@ -243,7 +247,7 @@
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
 
                 </tr>               
-
+                
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a href="#">January budgets</a>
@@ -254,7 +258,7 @@
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
 
                 </tr>                
-
+                                                
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a href="#">January budgets</a>
@@ -265,7 +269,7 @@
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
 
                 </tr>        
-
+                                                        
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a href="#">January budgets</a>
@@ -277,7 +281,7 @@
 
                 </tr>          
 
-
+                                                                
                 <tr id="tr-id-1" class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a href="#">January budgets</a>
@@ -329,7 +333,7 @@
                 <td class="amount__budgeted" data-value="50000">₦50,000</td>
 
                     </tr>
-
+        
             </tbody>
             </table>
             </div>
@@ -339,12 +343,12 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="dashboardNew.js"></script>
+    <script src="./js/dashboardNew.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
 <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
-
+    
 </body>
 </html>
