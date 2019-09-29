@@ -10,5 +10,10 @@ $(document).ready(function(){
     $(function() {
         $('#table').bootstrapTable()
       })
+
+      function deleteRow(r) {
+        let i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("table").deleteRow(i);
+    }
 });
     

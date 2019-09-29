@@ -6,7 +6,6 @@ $_SESS['loginError'] =$_SESS['emailError'] =$_SESS['passError'] = "";
 $password = $username="";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //user clicked submit button, implement logic
-
 $username = $_POST['username'];
 $password = $_POST['password'];
 

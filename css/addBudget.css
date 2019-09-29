@@ -20,7 +20,9 @@ body {
     padding: inherit;
     margin-right: 20px;
 }
-
+.table td{
+    color: #877676;
+}
 nav {
     display: grid;
     grid-template-columns: 1fr;
@@ -139,7 +141,24 @@ margin-right: 650px;
     width: 300px;
     margin-left: 10px;
 }
+.budget__form{
+    padding: 20px;
+}
 
+.budget__form input[type="text"], .budget__form select{
+    padding: 10px 20px;
+    width: 40%;
+    margin: 2%
+}
+
+.budget__form input[type="submit"]{
+    margin-top: 20px;
+    padding: 10px 70px;
+    background-color: #1032DE;
+    color: #FFFFFF;
+    border: none;
+    
+}
 .mTop{
     margin-top: 15px;
 }
