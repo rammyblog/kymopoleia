@@ -1,5 +1,5 @@
 <?php
-	ob_start();
+    ob_start();
     session_start();
     
     require_once "./PHP/database.php";
@@ -47,7 +47,7 @@
             <div class="brandname">
                 <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
-            <p class="welcome_user"><span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
+            <p class="welcome_user"><span class="blueText"><?php echo $_SESSION['firstname']    ;  echo $_SESSION['lastname']   ; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -82,14 +82,14 @@
             <div class="container">
 
                 <div class="welcome__text">
-                    <p class="welcome__user"><span class="dashboard__username"><?php  echo $_SESSION['lastname']	; ?></span>Here are your budget items feel free to add and remove.</p>
+                    <p class="welcome__user"><span class="dashboard__username"><?php  echo $_SESSION['lastname']    ; ?></span>Here are your budget items feel free to add and remove.</p>
                     <div class="budget__info">
                         <div>
                                 <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
                         </div>
                         <div>
                             <div class="pushLeft">
-                                <p><span class="cBlue">Budget Title :</span> <?php echo $_SESSION['Budget_id']	; ?></p>
+                                <p><span class="cBlue">Budget Title :</span> <?php echo $_SESSION['Budget_id']  ; ?></p>
                                 <p style="display: inline; color: #000000;">Total budget Amount</p>
                                 <p ><?php echo($Budget['Amount'])?></p>
                             </div>
