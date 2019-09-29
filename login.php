@@ -36,9 +36,10 @@ else{
 
     $_SESSION = $user;
 	if($username !== $user['email'] || !password_verify($password, $user['password'])){
-        $_SESS['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account.";
+        $_SESSION['loginError'] = "Invalid login credentials. Please crosscheck your login details or click on the Sign Up link to create an Account.";
 		// echo($_SESSION['loginError']);
     }elseif($username === $user['email']||$username === $user['email'] && password_verify($password, $user['password'])){
+        $_SESSION['user_id'] = $username;
         header("location: dashboard.php");
 		exit;
 	}
@@ -57,7 +58,7 @@ else{
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/account.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
-    <title>KymoMoney | Login</title>
+    <title>KymoBudget | Login</title>
 </head>
 
 <body>
@@ -65,7 +66,7 @@ else{
     <!-- Just an image -->
 
 
-    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="" height="30" alt="logo"></a>
+    <a href="index.php" id="top-logo"><img src="images/kymo.png" class="img-fluid" width="auto" height="30" alt="logo"></a>
 
     <img src="images/Ellipse.png" class="img-fluid top-ellipse" alt="">
 

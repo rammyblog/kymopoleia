@@ -1,6 +1,10 @@
 <?php
-
-
+require_once "./PHP/database.php";
+session_start();
+if(!isset($_SESSION['user_id'])) {
+    header("location: login.php");
+    exit;
+}
 
 ?>
 
@@ -39,9 +43,7 @@
                     <i class="fa fa-caret-down"></i>
                 </div>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Logout</a>
                 </div>
             </div>
 

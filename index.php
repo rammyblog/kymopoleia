@@ -4,7 +4,6 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,8 +47,7 @@
             </nav>
     </header>
 
-    <main>
-        
+    <main>      
 
         <section class="">
 

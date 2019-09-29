@@ -2,13 +2,13 @@
 body{
     font-family: 'Muli', sans-serif;
    font-style: normal;
-   min-height: 100vh;
-
-    
+   min-height: 100vh;   
 
 }
 
-
+.navbar{
+    position: fixed;
+}
 
 .nav-item {
     margin: 0 27px;
