@@ -80,14 +80,14 @@
             <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
-                    <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="./images/drop.png" alt="">
-                    </div>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="dashboard.php"><?php  echo($_SESSION['usernames']); ?></a>
-                        <a class="dropdown-item" href="logout.php">Sign out</a>
-                    </div>
-                  </div>
+                <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="./images/drop.png" alt="">
+                </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="dashboard.php"><?php  echo($_SESSION['usernames']); ?></a>
+                    <a class="dropdown-item" href="logout.php">Sign out</a>
+                </div>
+            </div>
 
         </nav>
 
@@ -188,7 +188,7 @@
                                         $itemp= $result4->fetch(PDO::FETCH_ASSOC); echo($itemp['priority']) ?><input type="hidden" id="prioriy_id" name="priorities[]"  value="<?php  echo($Item['Priority']);?>" ></td>
                                         <td><button type="button" href="#" type="text" onclick= "return deleteRow(this)"><i class="fa fa-trash"></i></button></td>
                                     </tr>
-                                        <?php }while($Item =$result3->fetch(PDO::FETCH_ASSOC));}?>
+                                        <?php $i=$i+1;}while($Item =$result3->fetch(PDO::FETCH_ASSOC));}?>
                                 </tbody>
                             </table>
                             <button type="submit" id="save" name="save" class="btn budget-save text-center bgBlue">Save</button>  <a  href="view-budget.php?value=" +<?php echo($_SESSION['Budget_id']);?> class="btn budget-save text-center bgBlue">Cancel</a>
