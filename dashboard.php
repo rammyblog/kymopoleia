@@ -56,7 +56,6 @@ if(!isset($_SESSION['user_id'])) {
         <section class="sidebar">
 
             <ul class="sidebar-list">
-                <li><i class="fa fa-plus-circle"></i><a href="#"> Add Budget </a></li>
                 <li> <i class="fa fa-home"></i><a href="dashboard.php" class="active"> Dashboard</a></li>
                 <li><i class="fa fa-file"></i><a href="addBudget.php"> Create New Budget </a></li>
                 <li><i class="fa fa-plus-circle"></i><a href="addBudget.php"> Add Budget </a></li>
