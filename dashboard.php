@@ -56,10 +56,10 @@ if(!isset($_SESSION['user_id'])) {
         <section class="sidebar">
 
             <ul class="sidebar-list">
-                <li> <i class="fa fa-home"></i><a href="#" class="active"> Dashboard</a></li>
-                <li><i class="fa fa-file"></i><a href="#"> Create New Budget </a></li>
-                <li><i class="fa fa-plus-circle"></i><a href="#"> Add Budget </a></li>
-                <li><i class="fa fa-plus-circle"></i><a href="#"> Add Expenses</a></li>
+                <li> <i class="fa fa-home"></i><a href="dashboard.php" class="active"> Dashboard</a></li>
+                <li><i class="fa fa-file"></i><a href="addBudget.php"> Create New Budget </a></li>
+                <li><i class="fa fa-plus-circle"></i><a href="addBudget.php"> Add Budget </a></li>
+                <li><i class="fa fa-plus-circle"></i><a href="./addBudget.php"> Add Expenses</a></li>
             </ul>
         </section>
 
@@ -347,7 +347,7 @@ if(!isset($_SESSION['user_id'])) {
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="dashboardNew.js"></script>
+    <script src="./js/dashboardNew.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
