@@ -133,7 +133,7 @@
             </thead>
             <tbody>
             <?php do{?>
-                <tr id="tr-id-1" onclick="re turn deleteRow('<?php echo($Budgets['Budget_id']); ?>')"class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
+                <tr id="tr-id-1" onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')"class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')"><?php  echo($Budgets['Budget_id']);?></a>
                 </td>
@@ -145,7 +145,7 @@
                 
                         echo($Budg);?></td>
                 <td class="amount__budgeted" data-value="<?php echo($Budgets['Amount']);?>">₦<?php echo($Budgets['Amount']);?></td>
-                <td><button type="button" onclick="re turn deleteRow('<?php echo($Budgets['Budget_id']); ?>')" class="btn btn-primary">View budget</button></td>
+                <td><button type="button" onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')" class="btn btn-primary">View budget</button></td>
                 </tr>
                 <?php }while($Budgets =$result->fetch(PDO::FETCH_ASSOC))?>
                 
