@@ -128,6 +128,7 @@
                 <th>Time due</th>
                 <th>Number of items</th>
                 <th>Amount Budgeted</th>
+                <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -144,9 +145,10 @@
                 
                         echo($Budg);?></td>
                 <td class="amount__budgeted" data-value="<?php echo($Budgets['Amount']);?>">₦<?php echo($Budgets['Amount']);?></td>
+                <td><button type="button" onclick="re turn deleteRow('<?php echo($Budgets['Budget_id']); ?>')" class="btn btn-primary">View budget</button></td>
                 </tr>
                 <?php }while($Budgets =$result->fetch(PDO::FETCH_ASSOC))?>
-        
+                
             </tbody>
             </table>
             <input type="hidden" name="hidden" id="hidden" class="form-control" >
