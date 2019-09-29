@@ -88,13 +88,13 @@
                                 <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
                         </div>
                         <div>
-                        <div class="pushLeft">
-                            <p><span class="cBlue">Budget Title :</span> <?php echo $_SESSION['Budget_id']	; ?></p>
-                            <p style="display: inline; color: #000000;">Total budget Amount</p>
-                            <p ><?php echo($Budget['Amount'])?></p>
-                        </div>
+                            <div class="pushLeft">
+                                <p><span class="cBlue">Budget Title :</span> <?php echo $_SESSION['Budget_id']	; ?></p>
+                                <p style="display: inline; color: #000000;">Total budget Amount</p>
+                                <p ><?php echo($Budget['Amount'])?></p>
+                            </div>
 
-                    </div>
+                        </div>
 
 
                     <!-- This was the way i implemented on django (JUST A GUIDE!) -->
@@ -165,8 +165,9 @@
             <a type="button" href="addBudgetItems.php" class="btn btn-success" id="add-row"><i class="fa fa-plus"></i> Update/Add Budget
                                 Item</a>
             </div>
-
-        </section>
+        </div>
+    </div>
+    </section>
 
     </main>
 
