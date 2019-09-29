@@ -83,22 +83,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body class="">
     <header>
 
-        <nav>
+    <nav>
             <div class="brandname">
-                <h2 class="header-brandname"><a href="#"><img src="images/kymo.png" alt=""> </a></h2>
+                <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
-            <p class="welcome_user"><span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
+            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
-                <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <img src="images/drop.png" alt="">
-                </div>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <a class="dropdown-item" href="#">Sign Out</a>
-                </div>
-            </div>
+                    <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="./images/drop.png" alt="">
+                    </div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="dashboard.php"><?php  echo($_SESSION['usernames']); ?></a>
+                        <a class="dropdown-item" href="logout.php">Sign out</a>
+                    </div>
+                  </div>
 
         </nav>
 
@@ -106,12 +105,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <main>
 
+
         <section class="sidebar">
+        
 
             <ul class="sidebar-list">
-                <li> <i class="fa fa-home"></i><a href="#"> Dashboard</a></li>
-                <li><i class="fa fa-plus-circle"></i><a href="#" class="active"> Add Budget </a></li>
-                <li><i class="fa fa-plus-circle"></i><a href="#"> Add Expenses</a></li>
+                <li><i class="fas fa-home"></i> Dashboard</li>
+                <li > <i class="fas fa-plus-circle"></i> View Budget Items</li>
+                <li class="active"><i class="fas fa-plus-circle"></i> Add Budget</li>
+                <li><i class="fas fa-plus-circle"></i>  Add Budget Items</li>
             </ul>
         </section>
 

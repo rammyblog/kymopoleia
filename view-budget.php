@@ -82,7 +82,7 @@
             <div class="container">
 
                 <div class="welcome__text">
-                    <p class="welcome__user">HI <span class="dashboard__username"><?php  echo $_SESSION['lastname']	; ?></span>Here are your budget items feel free to add and remove.</p>
+                    <p class="welcome__user"><span class="dashboard__username"><?php  echo $_SESSION['lastname']	; ?></span>Here are your budget items feel free to add and remove.</p>
                     <div class="budget__info">
                         <div>
                                 <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
