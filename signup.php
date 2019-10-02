@@ -11,7 +11,6 @@ $email = $_POST['emailAddress'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $confirmPassword = $_POST['confirmPassword'];
-
 if(empty($firstname) && empty($lastname) && empty($emailAddress) && empty($username) && empty($password) && empty($confirmPassword)){
     $errors  = "Fill in all fields". "</br>";
 }else if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
