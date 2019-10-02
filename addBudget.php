@@ -1,5 +1,5 @@
 <?php
-	ob_start();
+    ob_start();
     session_start();
     if(!isset($_SESSION['email'])){
          header("Location: login.php");
@@ -18,35 +18,35 @@ function protect_value($value){
 $data = array();
 $error = array();
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-	//===CREATE BUDGET AND TOTAL AMOUNT
-	$total_amount = protect_value($_POST['amount']);
+    //===CREATE BUDGET AND TOTAL AMOUNT
+    $total_amount = protect_value($_POST['amount']);
     $budget_name = protect_value($_POST['budget_name']);
     $startTime = protect_value($_POST['startTime']);
     $endTime = protect_value($_POST['endTime']);
-	if (empty($total_amount)) {
-		$error['total_amount'] = "total_amount is required";
-	}
-	if (empty($budget_name)) {
-		$error['budget_name'] = "Budget name is required";
-	}
-	if (!filter_var($_POST['amount'], FILTER_VALIDATE_INT)) {
-		$error['total_amount'] = "Only in integers is accepted";
-	}
-	$sql = "SELECT * FROM budget WHERE Budget_id = '$budget_name' AND username = '{$_SESSION['usernames']}'";
-		$result = $conn->query($sql);
-	if ($result->fetch(PDO::FETCH_ASSOC)) {
-			$error['budget_name'] = "Budget exists with this name";
-	}
-	if (empty($error)) {
-		$insert = "INSERT INTO budget (id,Budget_id,Amount,startTime,endTime,username)
-					VALUES( null, '$budget_name',  '$total_amount','$startTime','$endTime','{$_SESSION['usernames']}')";
+    if (empty($total_amount)) {
+        $error['total_amount'] = "total_amount is required";
+    }
+    if (empty($budget_name)) {
+        $error['budget_name'] = "Budget name is required";
+    }
+    if (!filter_var($_POST['amount'], FILTER_VALIDATE_INT)) {
+        $error['total_amount'] = "Only in integers is accepted";
+    }
+    $sql = "SELECT * FROM budget WHERE Budget_id = '$budget_name' AND username = '{$_SESSION['usernames']}'";
+        $result = $conn->query($sql);
+    if ($result->fetch(PDO::FETCH_ASSOC)) {
+            $error['budget_name'] = "Budget exists with this name";
+    }
+    if (empty($error)) {
+        $insert = "INSERT INTO budget (id,Budget_id,Amount,startTime,endTime,username)
+                    VALUES( null, '$budget_name',  '$total_amount','$startTime','$endTime','{$_SESSION['usernames']}')";
         $exe = $conn->exec($insert);
         $_SESSION['Budget_id'] = $budget_name;
         $_SESSION['Amount'] = $total_amount;
-		$data['message'] = "Budget created.";
-			
-	}
-	if ( !empty($error)) {
+        $data['message'] = "Budget created.";
+            
+    }
+    if ( !empty($error)) {
         $data['success'] = false;
         $data['errors']  = $error;
     } else {
@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // return to ajax
     header("Location: addBudgetItems.php");
     echo json_encode($data);
-	
+    
 }
 ?>
 
@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="brandname">
                 <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
-            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
+            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']    ;  echo $_SESSION['lastname']   ; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,5 +1,5 @@
 <?php
-	ob_start();
+    ob_start();
     session_start();
     require_once "./PHP/database.php";
     if(!isset($_SESSION['email'])){
@@ -34,7 +34,7 @@
             <div class="brandname">
                 <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
-            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']	;  echo $_SESSION['lastname']	; ?></span></p>
+            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']    ;  echo $_SESSION['lastname']   ; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -128,11 +128,12 @@
                 <th>Time due</th>
                 <th>Number of items</th>
                 <th>Amount Budgeted</th>
+                <th>Action</th>
                 </tr>
             </thead>
             <tbody>
             <?php do{?>
-                <tr id="tr-id-1" onclick="re turn deleteRow('<?php echo($Budgets['Budget_id']); ?>')"class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
+                <tr id="tr-id-1" onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')"class="tr-class-1" data-title="bootstrap table" data-object='{"key": "value"}'>
                 <td>
                     <a onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')"><?php  echo($Budgets['Budget_id']);?></a>
                 </td>
@@ -144,9 +145,10 @@
                 
                         echo($Budg);?></td>
                 <td class="amount__budgeted" data-value="<?php echo($Budgets['Amount']);?>">₦<?php echo($Budgets['Amount']);?></td>
+                <td><button type="button" onclick="return deleteRow('<?php echo($Budgets['Budget_id']); ?>')" class="btn btn-primary">View budget</button></td>
                 </tr>
                 <?php }while($Budgets =$result->fetch(PDO::FETCH_ASSOC))?>
-        
+                
             </tbody>
             </table>
             <input type="hidden" name="hidden" id="hidden" class="form-control" >

@@ -16,4 +16,3 @@ $(document).ready(function(){
         document.getElementById("table").deleteRow(i);
     }
 });
-    
