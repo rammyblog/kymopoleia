@@ -10,7 +10,7 @@
 
 <?php
 require_once "./PHP/database.php";
-echo($_SESSION['usernames']);
+// echo($_SESSION['usernames']);
 function protect_value($value){
  $secured_value = trim(stripslashes(htmlentities($value)));     
  return $secured_value;     
@@ -73,6 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/addBudget.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
 
@@ -87,7 +88,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="brandname">
                 <h2 class="header-brandname"><a href="..index.php"><img src="images/kymo.png" alt=""> </a></h2>
             </div>
-            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']    ;  echo $_SESSION['lastname']   ; ?></span></p>
+            <p class="welcome_user">Hi, <span class="blueText"><?php echo $_SESSION['firstname']; echo "&nbsp;" ;echo $_SESSION['lastname']   ; ?></span></p>
             <img class='user-avatar' src="images/user.png" alt="">
             <div class="dropdown">
                     <div class="dropdown-toggler" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -106,16 +107,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <main>
 
 
-        <section class="sidebar">
+    <section class="sidebar">
         
 
-            <ul class="sidebar-list">
-                <li><i class="fas fa-home"></i> Dashboard</li>
-                <li > <i class="fas fa-plus-circle"></i> View Budget Items</li>
-                <li class="active"><i class="fas fa-plus-circle"></i> Add Budget</li>
-                <li><i class="fas fa-plus-circle"></i>  Add Budget Items</li>
-            </ul>
-        </section>
+        <ul class="sidebar-list">
+            <li > <i class="fa fa-home"></i><a href="dashboard.php"> Dashboard</a></li>
+            <li> <i class="fas fa-plus-circle"></i><a href="view-budget.php"> View Budget Items</a></li>
+            <li><i class="fa fa-plus-circle"></i><a href="addBudget.php" class="active"> Add Budget</a></li>
+            <li><i class="fa fa-plus-circle"></i><a href="addBudgetItems.php"> Add Budget Items</a></li>
+        </ul>
+    </section>
 
         <section class="add-budget">
         <div style="height: 100px"></div>

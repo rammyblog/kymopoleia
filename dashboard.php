@@ -55,10 +55,10 @@
         <section class="sidebar">
 
             <ul class="sidebar-list">
-                <li > <i class="fa fa-home"></i><a href="#" class="active"> Dashboard</a></li>
-                <li> <i class="fas fa-plus-circle"></i> View Budget Items</li>
-                <li><a href="addBudget.php"><i class="fa fa-plus-circle"></i><a href="addBudget.php"> Add Budget </a></li>
-                <li><a href="#"><i class="fa fa-plus-circle"></i> Add Expenses</a></li>
+                <li > <i class="fa fa-home"></i><a href="dashboard.php" class="active"> Dashboard</a></li>
+                <li> <i class="fa fa-plus-circle"></i><a href="view-budget.php"> View Budget Items</a></li>
+                <li><a href="addBudget.php"><i class="fa fa-plus-circle"></i> Add Budget</li>
+                <li><a href="addBudgetItems.php"><i class="fa fa-plus-circle"></i> Add Budget Items</a></li>
             </ul>
         </section>
 

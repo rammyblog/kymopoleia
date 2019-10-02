@@ -13,7 +13,8 @@
             $result = $conn->query($sql);
             $Items= $result->fetch(PDO::FETCH_ASSOC);
             
-        }else{
+        }
+        else{
          $sql = "SELECT * FROM BudgetDetails WHERE Budget_id = '{$_SESSION['Budget_id']}'";
             $result = $conn->query($sql);
             $Items= $result->fetch(PDO::FETCH_ASSOC);
@@ -70,22 +71,21 @@
         
 
             <ul class="sidebar-list">
-                <li><i class="fas fa-home"></i> Dashboard</li>
-                <li class="active"> <i class="fas fa-plus-circle"></i> View Budget Items</li>
-                <li ><i class="fas fa-plus-circle"></i> Add Budget Items</li>
-                <li><i class="fas fa-plus-circle"></i>  Add Items</li>
+                <li > <i class="fa fa-home"></i><a href="dashboard.php"> Dashboard</a></li>
+                <li> <i class="fas fa-plus-circle"></i><a href="view-budget.php" class="active"> View Budget Items</a></li>
+                <li><a href="addBudget.php"><i class="fa fa-plus-circle"></i> Add Budget</li>
+                <li><a href="addBudgetItems.php"><i class="fa fa-plus-circle"></i> Add Budget Items</a></li>
             </ul>
         </section>
 
 
         <section class="buget__dashboard">
             <div class="container">
-
                 <div class="welcome__text">
-                    <p class="welcome__user"><span class="dashboard__username"><?php  echo $_SESSION['lastname']    ; ?></span>Here are your budget items feel free to add and remove.</p>
+                    <p class="welcome__user"><span class="dashboard__username"><?php  echo $_SESSION['lastname']; echo "&nbsp;"; ?></span>Here are your budget items feel free to add and remove.</p>
                     <div class="budget__info">
                         <div>
-                                <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
+                            <i style='color: #FD4720;' class="fas fa-wallet fa-2x"></i>
                         </div>
                         <div>
                             <div class="pushLeft">
@@ -95,6 +95,12 @@
                             </div>
 
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+
+                
 
 
                     <!-- This was the way i implemented on django (JUST A GUIDE!) -->
@@ -143,7 +149,7 @@
             <thead>
                 <tr>
                 <th>Items</th>
-                <th>Descriptiond</th>
+                <th>Description</th>
                 <th>Priority</th>
                 <th>Amount</th>
                 </tr>
@@ -154,7 +160,7 @@
                     <td>
                         <a href="#"><?php  echo($Items['Item']);?></a>
                     </td>
-                    <td data-value="526"><?php  echo($Items['description']);?></td>
+                    <td width="100px" data-value="526"><?php  echo($Items['description']);?></td>
                     <td data-value=""><?php  echo($Items['Priority']);?></td>
                     <td class="amount__budgeted" data-value="<?php  echo($Items['Amount']);?>">₦<?php  echo($Items['Amount']);?></td>
                 </tr>
@@ -164,8 +170,7 @@
             <input type="hidden" name="hidden" id="hidden" class="form-control" >
             <a type="button" href="addBudgetItems.php" class="btn btn-success" id="add-row"><i class="fa fa-plus"></i> Update/Add Budget
                                 Item</a>
-            </div>
-        </div>
+           
     </div>
     </section>
 
@@ -183,7 +188,7 @@
         var v = r;
             document.getElementById('hidden').val = v;
            console.log(document.getElementById('hidden').val);
-        //    window.location="../budget/view-budget.html?value=" +document.getElementById('hidden').val;
+        window.location="../budget/view-budget.html?value=" +document.getElementById('hidden').val;
     }
  </script>  
   
