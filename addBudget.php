@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/addBudget.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
     <script src="https://kit.fontawesome.com/833e0cadb7.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.css" rel="stylesheet">
 
@@ -107,16 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <main>
 
 
-    <section class="sidebar">
-        
-
-        <ul class="sidebar-list">
-            <li > <i class="fa fa-home"></i><a href="dashboard.php"> Dashboard</a></li>
-            <li> <i class="fas fa-plus-circle"></i><a href="view-budget.php"> View Budget Items</a></li>
-            <li><i class="fa fa-plus-circle"></i><a href="addBudget.php" class="active"> Add Budget</a></li>
-            <li><i class="fa fa-plus-circle"></i><a href="addBudgetItems.php"> Add Budget Items</a></li>
-        </ul>
-    </section>
+    <?php include "./PHP/sidebar.php"; ?>
 
         <section class="add-budget">
         <div style="height: 100px"></div>
@@ -151,7 +142,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./js/dashboardNew.js"></script>
-
+    <script src="./js/sidebar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
