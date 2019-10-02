@@ -92,15 +92,9 @@ else{
         </form>
 
     </section>
-<<<<<<< HEAD
-
-
-    <img src="images/Ellipse.png" class="img-fluid bottom-ellipse" alt="">
-=======
 
 
     <img src="images/Ellipse.png" class="img-fluid bottom-ellipse d-none d-md-none d-lg-block" alt="">
->>>>>>> 2dd8c6bfd447742b122e83b67a6bd753f21c5bf0
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
