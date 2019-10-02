@@ -5,14 +5,18 @@
     require_once "./PHP/database.php";
     if(!isset($_SESSION['email'])){
          header("Location: login.php");
-    }else{
+    }
+    else{
         if(!isset($_SESSION['Budget_id'])){
+            if($_GET['value']){
             $data = $_GET['value'];
             $_SESSION['Budget_id']=$data;
             $sql = "SELECT * FROM BudgetDetails WHERE Budget_id = '$data' ";
             $result = $conn->query($sql);
             $Items= $result->fetch(PDO::FETCH_ASSOC);
-            
+            }else{
+                header("Location: dashboard.php");
+            }
         }else{
          $sql = "SELECT * FROM BudgetDetails WHERE Budget_id = '{$_SESSION['Budget_id']}'";
             $result = $conn->query($sql);
