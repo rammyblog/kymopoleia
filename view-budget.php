@@ -9,12 +9,14 @@
     else{
         if(!isset($_SESSION['Budget_id'])){
             if($_GET['value']){
+                $_SESSION['error'] = "";
             $data = $_GET['value'];
             $_SESSION['Budget_id']=$data;
             $sql = "SELECT * FROM BudgetDetails WHERE Budget_id = '$data' ";
             $result = $conn->query($sql);
             $Items= $result->fetch(PDO::FETCH_ASSOC);
             }else{
+                $_SESSION['error'] = "select a budget from dashboard";
                 header("Location: dashboard.php");
             }
         }else{

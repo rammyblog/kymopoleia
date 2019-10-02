@@ -143,6 +143,11 @@ main {
     color: #fff;
 }
 
+.error{
+    color:rgb(250, 6, 6);
+    background-color: rgb(250, 6, 6);
+}
+
 .fixed-table-toolbar{
     float: right;
 }

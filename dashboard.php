@@ -59,10 +59,10 @@
        
 
 
-
+        
         <section class="buget__dashboard">
             <div class="container">
-
+            <br> <?php include "message.php" ?> <br>
                 <div class="welcome__text">
                     <div class="budget__info">
                         <div>
@@ -104,7 +104,7 @@
               </tbody>
               </table> -->
               <a href="addBudget.php" type="button" class="btn btn-success" id="add-row"><i class="fa fa-plus"></i> Create Budget Item</a>
-
+               
               <table
               id="table"
             data-toggle="table"
